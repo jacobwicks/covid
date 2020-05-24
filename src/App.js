@@ -15,16 +15,18 @@ const App = () => {
     return (
         <CurrentFileProvider>
             <div>
-                <h1 style={{ marginLeft: 100 }}>
+                <h1 style={{ marginLeft: 200 }}>
                     Washington Legal Info Search
                 </h1>
                 {scene === 'contribute' ? (
                     <Contribute backToSearch={() => setScene('')} />
                 ) : (
                     <div>
-                        <p style={{ marginLeft: 200 }}>
+                        <h3 style={{ marginLeft: 200 }}>
                             Do you have valuable information that people need to
-                            know? <br />
+                            know? 
+                            <br />
+                            <br />
                             <button
                                 onClick={() => setScene('contribute')}
                                 style={{
@@ -42,9 +44,9 @@ const App = () => {
                             >
                                 Add your info!
                             </button>
-                        </p>
+                        </h3>
                         <div style={{ marginLeft: 200 }}>
-                            <h2>
+                            <h3>
                                 Your address:
                                 <Address
                                     setCityJurisdiction={setCityJurisdiction}
@@ -52,14 +54,13 @@ const App = () => {
                                         setCountyJurisdiction
                                     }
                                 />
-                            </h2>
+                            </h3>
                         </div>
                         <div style={{ marginLeft: 200 }}>
-                            <h1>Jurisdiction</h1>
-                            <h2>City: {cityJurisdiction}</h2>
-                            <h2>County: {countyJurisdiction}</h2>
+                            <h3>Jurisdiction:</h3>
+                            <h3>City: {cityJurisdiction}</h3>
+                            <h3>County: {countyJurisdiction}</h3>
                         </div>
-
                         <br />
                         <br />
                         <SearchResults

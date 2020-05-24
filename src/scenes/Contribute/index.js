@@ -24,8 +24,9 @@ const Contribute = ({ backToSearch }) => {
                 marginLeft: 200,
             }}
         >
-            Got information to add? Use this markdown editor to write your
+            <h3>Got information to add? Use this markdown editor to write your
             contribution.
+            </h3>
             <br />
             <button
                 onClick={() => backToSearch()}
@@ -44,6 +45,8 @@ const Contribute = ({ backToSearch }) => {
             >
                 Back to Search Page
             </button>
+            <br />
+            <br />
             <MdEditor
                 value="Your text goes here"
                 style={{ height: '500px' }}
